@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Expenses from "./components/Expenses/Expenses"
 import NewExpense from "./components/NewExpense/NewExpense"
-import Prueba from "./components/UI/Prueba"
 
 function App() {
   const [expenses, setExpenses] = useState([])
@@ -38,11 +37,8 @@ function App() {
     ]))
   }
 
-  const imprimeEsto = (mensaje) => console.log('impreso desde APP', mensaje)
-
   return (
     <div>
-      <Prueba imprimir={imprimeEsto} />
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
